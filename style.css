@@ -1,0 +1,375 @@
+/* 구글 폰트  */
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+
+/* reset */
+@import url("./styles/reset.css");
+/* variables */
+@import url("./styles/variables.css");
+
+/* common */
+body {
+  font: normal 16px/1.4 var(--aldrich-font-style);
+  letter-spacing: 1px;
+  background: rgb(46, 45, 45);
+  color: var(--main-font-color);
+}
+
+.wrap #circle article .inner > div:hover {
+  & i {
+    opacity: 1;
+    color: var(--main-dark-color);
+    text-shadow: 0 0 10px var(--main-light-color);
+    transform: scale(1.2);
+  }
+  & h2 {
+    color: var(--main-dark-color);
+    text-shadow: 0 0 10px var(--accent-font-color);
+    margin-top: 20px;
+  }
+}
+
+/* content  */
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 1700px;
+  & > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+  #circle {
+    width: 700px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    margin-top: -400px;
+    margin-left: -300px;
+    transform-style: preserve-3d;
+    animation: cyberspace 40s linear none infinite;
+    article {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      h1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 2.7rem;
+        color: var(--main-dark-color);
+        text-shadow: 0 0 10px var(--main-light-color);
+        opacity: 0;
+        transition: all 0.5s;
+      }
+      &:hover h1 {
+        opacity: 1;
+        top: -70px;
+      }
+      .inner {
+        width: 100%;
+        height: 100%;
+        & > div {
+          width: 100%;
+          height: 100%;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          background: rgba(255, 255, 255, 0.06);
+          padding: 10px;
+          opacity: 0.7;
+          position: relative;
+          cursor: pointer;
+          overflow: hidden;
+          transition: all 0.5s;
+          &:hover {
+            background: rgba(255, 255, 255, 0.15);
+            opacity: 1;
+            transform: scale(1.03);
+          }
+        }
+      }
+      &.face1 {
+        transform: rotateY(0deg) translateZ(-680px);
+        .inner {
+          width: 100%;
+          height: 100%;
+          margin-left: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          & > div {
+            width: 320px;
+            height: 254px;
+            border: none;
+            background: none;
+            display: grid;
+            place-items: center;
+            justify-content: center;
+            &:nth-child(odd) {
+              margin-top: 50px;
+            }
+            &:nth-child(even) {
+              margin-bottom: 50px;
+            }
+            p {
+              margin: 0;
+              i {
+                font-size: 6.25rem;
+                opacity: 0.7;
+                transition: all 0.5s;
+              }
+            }
+            h2 {
+              margin: 10px 0 0;
+              letter-spacing: 2px;
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+      &.face2 {
+        transform: rotateY(60deg) translateZ(-680px);
+        .inner {
+          & > div {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: none;
+            h2 {
+              font-size: 2rem;
+              margin: 0 0 10px;
+            }
+            video {
+              width: 100%;
+              height: 400px;
+              object-fit: cover;
+              border-radius: 38%;
+              margin-bottom: 20px;
+            }
+            h3 {
+              color: var(--main-light-color);
+              margin-bottom: 15px;
+            }
+            p {
+              color: var(--border-main-color);
+              font: normal 1rem/1.3 var(--aldrich-font-style);
+              border-radius: 5px;
+              a {
+                display: inline-block;
+                justify-self: end;
+                text-align: right;
+                width: 100%;
+                text-shadow: 0 0 10px var(--main-light-color);
+              }
+            }
+          }
+        }
+      }
+      &.face3 {
+        transform: rotateY(120deg) translateZ(-680px);
+        .inner {
+          & > div {
+            width: 650px;
+            height: auto;
+            border: none;
+            background: none;
+            margin-bottom: 15px;
+            margin-left: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            .pic {
+              width: 300px;
+              height: 180px;
+              border: 1px solid var(--main-light-color);
+              border-radius: 0 30px 50px 10px;
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              overflow: hidden;
+            }
+            .con {
+              text-align: center;
+              width: 320px;
+              h2 {
+                font-size: 1.8rem;
+                color: var(--main-light-color);
+                text-shadow: 0 0 10px var(--main-dark-color);
+              }
+              p {
+                color: var(--main-dark-color);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font: bold 2.8rem/1.3 var(--aldrich-font-style);
+                text-shadow: 0 0 10px var(--main-light-color);
+              }
+              span {
+                display: inline-block;
+                right: 50px;
+                bottom: 80px;
+                font: normal 1.8rem/1 var(--aldrich-font-style);
+                text-shadow: 0 0 10px var(--main-light-color);
+              }
+            }
+            &:nth-child(1) .pic {
+              background-image: url("./img/silk-sonic.jpg");
+            }
+            &:nth-child(2) .pic {
+              background-image: url("./img/doiiech.png");
+            }
+            &:nth-child(3) .pic {
+              background-image: url("./img/Bille.jpg");
+            }
+            &:nth-child(4) {
+              display: flex;
+              justify-content: space-evenly;
+              h2 {
+                font-size: 2rem;
+              }
+              p,
+              span {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+      &.face4 {
+        transform: rotateY(180deg) translateZ(-680px);
+        .inner {
+          & > div {
+            border: none;
+            background: none;
+            h2 {
+              text-align: center;
+              font-size: 2rem;
+            }
+            &:nth-child(1) {
+              width: 100%;
+              height: 600px;
+              margin-bottom: 20px;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                border-radius: 20px;
+                border: 1px solid var(--main-light-color);
+              }
+            }
+            &:nth-child(2) {
+              width: 100%;
+              height: 180px;
+              .box {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                img {
+                  width: 100;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.face5 {
+        transform: rotateY(240deg) translateZ(-680px);
+        .inner {
+          & > div {
+            width: 100%;
+            height: 185px;
+            padding: 20px;
+            border-radius: 45%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.5s;
+            &:hover i,
+            a {
+              color: var(--main-dark-color);
+            }
+            i {
+              padding: 20px;
+              font-size: 4.3rem;
+              color: var(--main-light-color);
+              text-align: center;
+              transition: var(--main-dark-color) all 0.5s;
+            }
+            .con {
+              flex: 1;
+              padding-left: 20px;
+              max-width: 600px;
+              text-align: left;
+              p {
+                color: var(--info-font-color);
+                font: normal 1rem/1.5 var(--hyundai-font-style);
+                line-height: 1.6;
+                margin: 0;
+                text-align: left;
+                position: relative;
+                a {
+                  position: absolute;
+                  padding-left: 40%;
+                  text-align: right;
+                  color: var(--main-light-color);
+                  text-shadow: 0 0 10px var(--main-light-color);
+                }
+              }
+            }
+          }
+        }
+      }
+      &.face6 {
+        transform: rotateY(300deg) translateZ(-680px);
+        .inner {
+          & > div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0px 80px 100px 50px;
+            border: 1px solid var(--main-light-color);
+            video {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              opacity: 1;
+              transform: scale(1.19);
+            }
+            h2 {
+              position: absolute;
+              bottom: 10px;
+              left: 10px;
+              color: var(--main-dark-color);
+              font: normal 2.5rem/1.1 var(--aldrich-font-style);
+              text-shadow: 0 0 10px #f2f6e7;
+              z-index: 2;
+              em {
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes cyberspace {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
