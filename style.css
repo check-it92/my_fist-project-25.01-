@@ -109,10 +109,10 @@ body {
             place-items: center;
             justify-content: center;
             &:nth-child(odd) {
-              margin-top: 50px;
+              margin-top: 40px;
             }
             &:nth-child(even) {
-              margin-bottom: 50px;
+              margin-bottom: 40px;
             }
             p {
               margin: 0;
@@ -184,11 +184,15 @@ body {
               width: 300px;
               height: 180px;
               border: 1px solid var(--main-light-color);
-              border-radius: 0 30px 50px 10px;
+              border-radius: 40px 0px 80px 40px;
               background-position: center;
               background-size: cover;
               background-repeat: no-repeat;
               overflow: hidden;
+              transition: box-shadow all 0.3s, transform all 0.3s;
+              &:hover {
+                box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+              }
             }
             .con {
               text-align: center;
@@ -196,7 +200,7 @@ body {
               h2 {
                 font-size: 1.8rem;
                 color: var(--main-light-color);
-                text-shadow: 0 0 10px var(--main-dark-color);
+                text-shadow: 0 0 10px var(--main-light-color);
               }
               p {
                 color: var(--main-dark-color);
@@ -287,14 +291,19 @@ body {
           & > div {
             width: 100%;
             height: 185px;
-            padding: 20px;
+            padding: 10px;
             border-radius: 45%;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             transition: all 0.5s;
-            &:hover i,
+            &:hover {
+              color: black;
+              i {
+                color: black;
+              }
+            }
             a {
               color: var(--main-dark-color);
             }
@@ -303,7 +312,7 @@ body {
               font-size: 4.3rem;
               color: var(--main-light-color);
               text-align: center;
-              transition: var(--main-dark-color) all 0.5s;
+              transition: all 0.5s;
             }
             .con {
               flex: 1;
@@ -311,14 +320,17 @@ body {
               max-width: 600px;
               text-align: left;
               p {
+                width: 450px;
                 color: var(--info-font-color);
                 font: normal 1rem/1.5 var(--hyundai-font-style);
                 line-height: 1.6;
                 margin: 0;
                 text-align: left;
                 position: relative;
+                text-shadow: 0 0 2px var(--main-light-color);
                 a {
                   position: absolute;
+                  font-size: 1.1rem;
                   padding-left: 40%;
                   text-align: right;
                   color: var(--main-light-color);

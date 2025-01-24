@@ -36,3 +36,4 @@ video.addEventListener("click", () => {
     video.muted = true; // 음성 비활성화
   }
 });
+
